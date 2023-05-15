@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Notificació de missatges del sistema per Telegram usant un bot
+# Notificació de missatges del sistema per Telegram usant un bo
 
 TOKEN="6180835850:AAHGq84RbYrBR3TNI7tSIQd-m_8Z3CkP1nU"
 ID="886784679"
