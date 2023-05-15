@@ -7,4 +7,4 @@ ID="886784679"
 MENSAJE=${1}
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
-curl -s -X POST $URL -d chat_id=$ID -d text="$MENSAJE"
+curl -s -X POST $URL -d chat_id=$ID -d text="$MENSAJE "
