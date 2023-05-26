@@ -28,6 +28,6 @@ echo "Paràmetres: ${parametres[*]}"
 
 # Generació de contrasenyes per a cada usuari
 for user in "${parametres[@]}"; do
-  password=$(openssl rand -base64 12)
+  password=$(openssl rand -base64 12 | sha256sum)
   echo "Usuari: $user - Contrasenya: $password"
 done
