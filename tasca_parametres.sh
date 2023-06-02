@@ -23,7 +23,8 @@ TOTS_ELS_PARAMETRES=${*}
 echo "TOTS ELS PARÀMETRES: ${TOTS_ELS_PARAMETRES}"
 
 # Generar una contrasenya aleatòria per a cada usuari passat com a paràmetre
-for USER_NAME in ${@}; do
+for USER_NAME in ${@}
+do
     PASSWORD=$(date +%s%N | sha256sum | head -c10)
     echo "${USER_NAME}:${PASSWORD}"
 
@@ -32,9 +33,11 @@ for USER_NAME in ${@}; do
     
     # Comprovar si ha hagut alguna errada
     if [[${?} -ne 0]]
-    #Comprovam si funciona
-    echo  "Errada creant usuari"
-    exit 1
+    then
+        #Comprovam si funciona
+        echo  "Errada creant usuari"
+        exit 1
+    fi
 
     # Comprovar si s'ha creat bé
     if [[ $? -eq 0 ]]; then
