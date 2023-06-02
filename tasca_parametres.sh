@@ -29,6 +29,12 @@ for USER_NAME in ${@}; do
 
     # Crear l'usuari amb el home
     useradd -m ${USER_NAME}
+    
+    # Comprovar si ha hagut alguna errada
+    if [[${?} -ne 0]]
+    #Comprovam si funciona
+    echo  "Errada creant usuari"
+    exit 1
 
     # Comprovar si s'ha creat bé
     if [[ $? -eq 0 ]]; then
